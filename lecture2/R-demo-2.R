@@ -95,7 +95,13 @@ signfct(-3:4)  # our function is not that smart, due to the if-condition only ac
 #'
 #' I) Make a function with a for loop that can calculate the product of all the entries in an input vector.
 #' Compare with the built-in function `prod` (don't call your function prod, or you won't be able to use the built-in function easily).
-#'
+vecProd <- function(x){
+  product <- x[1]
+  for (i in 2:length(x)){product <- product * x[i]}
+  return(product)
+}
+vecProd(c(2,3,4))
+
 #' II) Make a function that will calculate the Fibonacci number up to n (an input parameter).
 #'     - Does it handle n=1 or 2 correctly? (hint: an `if` statement may be useful here)
 #'     - Does it handle negative numbers correctly? (hint: the `stop` function can be used to give an error message)
