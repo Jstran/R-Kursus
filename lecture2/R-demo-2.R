@@ -106,7 +106,17 @@ vecProd(c(2,3,4))
 #'     - Does it handle n=1 or 2 correctly? (hint: an `if` statement may be useful here)
 #'     - Does it handle negative numbers correctly? (hint: the `stop` function can be used to give an error message)
 #'     - Does it handle decimal numbers correctly?
-#'
+
+fiboFunc <- function(n){
+  fibo1 <- 0 
+  fibo2 <- 1
+  for (i in 1:n){
+    fibo3 <- fibo1 + fibo2
+    fibo1 <- fibo2
+    fibo2 <- fibo3}
+  return(fibo1)
+}
+fiboFunc(10)
 #' III) Install and load the package `ggplot2` for creating nice plots in R.
 #' Look at the package help and experiment a bit. To get an idea of the possibilities
 #' search for ggplot2 at <https://images.google.com>.
